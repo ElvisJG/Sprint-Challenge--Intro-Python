@@ -34,7 +34,7 @@ def cityreader(cities=[]):
     with open('cities.csv', newline='') as csvfile:
         REEader = csv.reader(csvfile, delimiter=',')
         next(REEader)
-        new_city = [City(row[0], row[3], row[4])
+        new_city = [City(row[0], float(row[3]), float(row[4]))
                     for row in REEader]
         return new_city
 
